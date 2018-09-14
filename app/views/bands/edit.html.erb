@@ -1,0 +1,18 @@
+<h1>This is the band edit page....</h1>
+
+<% if flash[:errors] %>
+<%= flash[:errors] %>
+<% end %>
+
+<form action="<%= band_url(@band) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  
+  <label>Edit Name:</label>
+  <input type="text" name="band[name]" value="<%= @band.name %>">
+  <br>
+  <input type="submit" value="Submit Changes">
+  
+</form> 
+  

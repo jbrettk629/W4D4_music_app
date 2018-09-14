@@ -1,0 +1,8 @@
+<h1> <%= Band.find_by(id: @album.band_id).name %>><%= @album.title %> </h1>
+
+  <li> Release Year:<%= @album.year %></li>
+  <li>Album Type: <%= @album.studio ? "Studio" : "Live" %>
+
+  <br>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
